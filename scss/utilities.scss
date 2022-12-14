@@ -1,0 +1,60 @@
+@import "variables";
+
+// mixins for flex boxes 
+@mixin board-boxes-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin board-plain-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: $position;
+    margin-left: $margin-center;
+    margin-right: $margin-center;
+}
+
+@mixin board-container-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+}
+
+@mixin button-styling {
+    background: $gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+}
+
+//functions
+@function color($red, $green, $blue) {
+    $new-color: rgb($red, $green, $blue);
+    @return $new-color;
+}
+
+@function invert($color, $amount: 100%) {
+    $inverse: change-color($color, $hue: hue($color) + 180);
+    @return mix($inverse, $color, $amount);
+  }
+
+//flow controll attempts throw aways
+@each $size in $sizes {
+    .symbols-#{$size} {
+        font-size: $size;
+        font-weight: $size;
+        font-stretch: $size;
+    }
+}
+
+
+@for $i from 1 through 3 {
+  ul:nth-child(3n + #{$i}) {
+    background-color: lighten($base-color, $i * 5%);
+  }
+}

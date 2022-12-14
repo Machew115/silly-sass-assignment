@@ -1,0 +1,167 @@
+@import "variables";
+@import "utilities";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.backdrop-img {
+    background-image: url('assets/robotic-background-blur.jpg');
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.div {
+    .board-container{
+        padding: 0px;
+        height: 70vh;
+        @include board-container-flex;
+        margin-top: 21px;
+        margin-left: $margin-center;
+        margin-right: $margin-center;
+        .player {
+            background-color: $metal;
+            width:8.5em;
+            .symbols {
+                color: $rotten-blood;
+                font-size: large;
+                font-weight: bold;
+                text-align: center;
+                box-shadow: 6px 4px inset color(35, 34, 34);
+                padding: 3px;
+            }
+        }
+    }
+}
+
+
+
+h1 {
+    margin-bottom: 25px;
+    font-family: $text-font-family;
+    font-weight: bold;
+    background-color: $white;
+    padding: 25px;
+    position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  @include button-styling;
+  border: 2px solid;
+    padding: 10px;
+    box-shadow: 6px 4px inset;
+}
+
+#board-plain {
+    height: 150px;
+    width: 148.5px;
+    @include board-container-flex;
+    font-size: 120px;
+    border-right: 2px solid ;
+    border-bottom: 2px solid ;
+    background-color: color(130, 104, 104);
+    font-family: $text-font-family;
+    font-weight: bold;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+        .box {
+            height: 150px;
+            width: 148.5px;
+            font-size: 120px;
+            border-right: 2px solid ;
+            border-bottom: 2px solid ;
+            background-color: color(130, 104, 104);
+            font-family: $XO-font-family;
+            font-weight: bold;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+            &:nth-child(3n) {
+                border-right: none;
+            }
+            &:nth-child(6) {
+                border-bottom: none;
+            }
+            &:hover {
+                font-weight: bolder;
+            }
+        }
+}
+
+#start-box {
+    background-color: $metal;
+    text-align: center;
+    width: 50%;
+    height: 13em;
+    margin-top: 25px;
+    margin-left: $margin-center;
+    margin-right: $margin-center;
+    border: 2px solid;
+    padding: 10px;
+    box-shadow: 6px 4px inset;
+    .context {
+        text-align: end;
+    }
+    .p {
+        font-family: $text-font-family;
+        font-size: large;
+        font-weight: bold;
+        padding: 0%;
+    }
+}
+
+#game-over-area {
+    background-color: $metal;
+    text-align: center;
+    width: 25%;
+    height: 13em;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid;
+    padding: 10px;
+    box-shadow: 6px 4px inset;
+    .h2 {
+        font-weight: 100;
+    font-family: $text-font-family;
+    }
+    .p {
+        text-shadow: none;
+    }
+}
+
+#replay-btn {
+    @include button-styling;
+    margin-top:15px;
+    width: 8em;
+    font-weight: 300;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 2.5em;
+    text-align: center;
+    border: 2px solid black;
+    padding: 1px;
+    box-shadow: 6px 4px inset;
+}
+
+#play-btn {
+    @include button-styling;
+    margin-top: 17px;
+    width: 4em;
+    font-weight: 300;
+    font-family: invert($metal);
+    font-size: 2.5em;
+    text-align: center;
+    border: 1px solid $rotten-blood;
+    padding: 1px;
+    box-shadow: 6px 4px inset;
+}
+
+.hide {
+    display: none;
+}
+.visible {
+    display: block;
+}

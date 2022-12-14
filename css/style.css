@@ -1,0 +1,214 @@
+.symbols-60px {
+  font-size: 60px;
+  font-weight: 60px;
+  font-stretch: 60px;
+}
+
+.symbols-50px {
+  font-size: 50px;
+  font-weight: 50px;
+  font-stretch: 50px;
+}
+
+.symbols-80px {
+  font-size: 80px;
+  font-weight: 80px;
+  font-stretch: 80px;
+}
+
+ul:nth-child(3n+1) {
+  background-color: #004080;
+}
+
+ul:nth-child(3n+2) {
+  background-color: #004d99;
+}
+
+ul:nth-child(3n+3) {
+  background-color: #0059b3;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.backdrop-img {
+  background-image: url("assets/robotic-background-blur.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.div .board-container {
+  padding: 0px;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 21px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.div .board-container .player {
+  background-color: grey;
+  width: 8.5em;
+}
+.div .board-container .player .symbols {
+  color: black;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 6px 4px inset rgb(35, 34, 34);
+  padding: 3px;
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  background-color: white;
+  padding: 25px;
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  background: linear-gradient(to bottom, #000, red 60%, grey 60%, #fff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+  border: 2px solid;
+  padding: 10px;
+  box-shadow: 6px 4px inset;
+}
+
+#board-plain {
+  height: 150px;
+  width: 148.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 120px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  background-color: rgb(130, 104, 104);
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+#board-plain .box {
+  height: 150px;
+  width: 148.5px;
+  font-size: 120px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  background-color: rgb(130, 104, 104);
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+#board-plain .box:nth-child(3n) {
+  border-right: none;
+}
+#board-plain .box:nth-child(6) {
+  border-bottom: none;
+}
+#board-plain .box:hover {
+  font-weight: bolder;
+}
+
+#start-box {
+  background-color: grey;
+  text-align: center;
+  width: 50%;
+  height: 13em;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid;
+  padding: 10px;
+  box-shadow: 6px 4px inset;
+}
+#start-box .context {
+  text-align: end;
+}
+#start-box .p {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: large;
+  font-weight: bold;
+  padding: 0%;
+}
+
+#game-over-area {
+  background-color: grey;
+  text-align: center;
+  width: 25%;
+  height: 13em;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid;
+  padding: 10px;
+  box-shadow: 6px 4px inset;
+}
+#game-over-area .h2 {
+  font-weight: 100;
+  font-family: "IBM Plex Mono", monospace;
+}
+#game-over-area .p {
+  text-shadow: none;
+}
+
+#replay-btn {
+  background: linear-gradient(to bottom, #000, red 60%, grey 60%, #fff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+  margin-top: 15px;
+  width: 8em;
+  font-weight: 300;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 2.5em;
+  text-align: center;
+  border: 2px solid black;
+  padding: 1px;
+  box-shadow: 6px 4px inset;
+}
+
+#play-btn {
+  background: linear-gradient(to bottom, #000, red 60%, grey 60%, #fff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+  margin-top: 17px;
+  width: 4em;
+  font-weight: 300;
+  font-family: gray;
+  font-size: 2.5em;
+  text-align: center;
+  border: 1px solid black;
+  padding: 1px;
+  box-shadow: 6px 4px inset;
+}
+
+.hide {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */
